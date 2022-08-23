@@ -46,14 +46,9 @@ dependencies:
   build_runner: ^2.1.0
   build_test: ^2.1.0
   dio: ^4.0.6
-  google_maps_flutter: ^2.1.7
-  location: ^4.4.0
   json_serializable: ^6.2.0
   carousel_slider: ^4.1.1
   google_fonts: ^3.0.1
-  syncfusion_flutter_calendar: ^20.2.36
-  step_progress_indicator: ^1.0.2
-  qr_code_scanner: ^1.0.0
   shared_preferences: ^2.0.15
   
 dev_dependencies:
@@ -68,6 +63,12 @@ dev_dependencies:
 
 # The following section is specific to Flutter.
 flutter:
+  fonts:
+    - family: Alpharush
+      fonts:
+        - asset: fonts/Alpharush.ttf
+  assets:
+        - assets/images/vhs_background.jpg
 
   uses-material-design: true
   
