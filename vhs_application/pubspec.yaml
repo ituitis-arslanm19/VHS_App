@@ -74,6 +74,12 @@ flutter:
         - assets/images/video_camera.png
         - assets/images/glitch.png
         - assets/images/infinity.png
+        - assets/images/tutorial_1.png
+        - assets/images/tutorial_2.png
+        - assets/images/video.png
+        - assets/images/photo.png
+        - assets/images/folder.png
+        - assets/images/headline.png
 
   uses-material-design: true
   
