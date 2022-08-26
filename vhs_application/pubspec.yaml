@@ -71,6 +71,9 @@ flutter:
         - asset: fonts/Alpharush.ttf
   assets:
         - assets/images/vhs_background.jpg
+        - assets/images/video_camera.png
+        - assets/images/glitch.png
+        - assets/images/infinity.png
 
   uses-material-design: true
   

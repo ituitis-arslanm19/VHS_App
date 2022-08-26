@@ -15,37 +15,43 @@ class SettingsViewWithoutAccess extends StatelessWidget {
     double screenWidth = SizeConfig.blockSizeHorizontal!;
     double screenHeight = SizeConfig.blockSizeVertical!;
     return Scaffold(
-      backgroundColor: Colors.black,
-      body: Column(
-        children: [
-          buildBackText(),
-          buildSettingsText(),
-          buildPremiumText(),
-          Container(
-              height: screenHeight*10, //for example
-              child: ListView(
-                padding: EdgeInsets.zero,
-                children: <Widget>[
-                  buildLicenseItem(screenHeight*5),
-                  buildRecordinsItem(screenHeight*5)
-                ],
-              )),
-          buildGeneralText(),
-          Container(
-              height: screenHeight*25, //for example
-              child: ListView(
-                padding: EdgeInsets.zero,
-                children: <Widget>[
-                  buildItem(Icons.refresh, () => {}, "Subscription", screenHeight*5),
-                  buildItem(Icons.chat_bubble_outline_rounded, () => null, "Contact support",screenHeight*5),
-                  buildItem(Icons.share, () => null, "Share our app",screenHeight*5),
-                  buildItem(Icons.description_outlined, () => {}, "Privacy Policy",screenHeight*5),
-                  buildItem(Icons.description_outlined, () => null, "Terms of usage",screenHeight*5)
-                ],
-              )),
-        ],
-      ),
-    );
+        backgroundColor: Colors.black,
+        body: OrientationBuilder(builder: (context, orientation) {
+          return Column(
+            children: [
+              buildBackText(),
+              buildSettingsText(),
+              buildPremiumText(),
+              Container(
+                  height: screenHeight * 10, //for example
+                  child: ListView(
+                    padding: EdgeInsets.zero,
+                    children: <Widget>[
+                      buildLicenseItem(screenHeight * 5),
+                      buildRecordinsItem(screenHeight * 5)
+                    ],
+                  )),
+              buildGeneralText(),
+              Container(
+                  height: screenHeight * 25, //for example
+                  child: ListView(
+                    padding: EdgeInsets.zero,
+                    children: <Widget>[
+                      buildItem(Icons.refresh, () => {}, "Subscription",
+                          screenHeight * 5),
+                      buildItem(Icons.chat_bubble_outline_rounded, () => null,
+                          "Contact support", screenHeight * 5),
+                      buildItem(Icons.share, () => null, "Share our app",
+                          screenHeight * 5),
+                      buildItem(Icons.description_outlined, () => {},
+                          "Privacy Policy", screenHeight * 5),
+                      buildItem(Icons.description_outlined, () => null,
+                          "Terms of usage", screenHeight * 5)
+                    ],
+                  )),
+            ],
+          );
+        }));
   }
 
   Align buildGeneralText() {
@@ -153,7 +159,8 @@ class SettingsViewWithoutAccess extends StatelessWidget {
         ));
   }
 
-  Container buildItem(final IconData icon, final Function()? onPressed, final String text, double screenHeight) {
+  Container buildItem(final IconData icon, final Function()? onPressed,
+      final String text, double screenHeight) {
     return Container(
         height: screenHeight,
         color: Color.fromRGBO(28, 28, 30, 1),
