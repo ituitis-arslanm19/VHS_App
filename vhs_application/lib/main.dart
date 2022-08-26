@@ -1,9 +1,21 @@
+import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
-import 'package:vhs_application/core/widgets/buttons/camera_button.dart';
+import 'package:vhs_application/core/widgets/buttons/camera_buttonS.dart';
+import 'package:vhs_application/screen/home/view/home_view.dart';
 
-void main() => runApp(MyApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  final cameras = await availableCameras();
+
+  // Get a specific camera from the list of available cameras.
+  final firstCamera = cameras.first;
+  runApp(MyApp(camera: firstCamera));
+}
 
 class MyApp extends StatelessWidget {
+  final CameraDescription camera;
+
+  const MyApp({super.key, required this.camera});
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -11,26 +23,9 @@ class MyApp extends StatelessWidget {
       title: 'Material App',
       home: Scaffold(
         body: SafeArea(
-          child: Container(
-            decoration: BoxDecoration(
-                image: DecorationImage(
-                    image: AssetImage("assets/images/vhs_background.jpg"),
-                    fit: BoxFit.cover)),
-            child: Align(
-              alignment: Alignment.topLeft,
-              child: Padding(
-                padding: const EdgeInsets.all(15.0),
-                child: CameraButton(
-                  text: "SELFIE",
-                  textSize: 16,
-                  width: 76,
-                  height: 44,
-                  onPressed: () {},
-                ),
-              ),
-            ),
-          ),
-        ),
+            child: HomeView(
+          camera: camera,
+        )),
       ),
     );
   }

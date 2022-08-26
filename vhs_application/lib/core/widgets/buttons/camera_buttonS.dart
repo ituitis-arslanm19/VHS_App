@@ -1,23 +1,27 @@
 import 'package:flutter/material.dart' hide BoxDecoration, BoxShadow;
 import 'package:flutter_inset_box_shadow/flutter_inset_box_shadow.dart';
 
-class CameraButton extends StatelessWidget {
+class CameraButtonS extends StatelessWidget {
   final double? textSize;
   final Color? color;
   final Function()? onPressed;
   final String text;
+  final double width;
 
-  const CameraButton({
+  const CameraButtonS({
     super.key,
     required this.textSize,
     required this.onPressed,
     required this.text,
     this.color = const Color.fromRGBO(92, 92, 92, 1),
+    required this.width,
   });
 
   @override
   Widget build(BuildContext context) {
     return Container(
+      width: width,
+      height: width,
       decoration: BoxDecoration(
         color: Color.fromRGBO(0, 0, 0, 1),
         borderRadius: BorderRadius.circular(3),
@@ -38,7 +42,7 @@ class CameraButton extends StatelessWidget {
                     inset: true,
                     blurRadius: 4.0,
                     offset: Offset(-2, -2),
-                    color: Color.fromRGBO(0, 0, 0, 0.35))
+                    color: Color.fromRGBO(0, 0, 0, .35))
               ]),
           child: Padding(
             padding: const EdgeInsets.fromLTRB(2, 1.83, 2, 1.83),
@@ -62,7 +66,7 @@ class CameraButton extends StatelessWidget {
                 padding: const EdgeInsets.fromLTRB(2, 1.83, 2, 1.83),
                 child: Container(
                   decoration: BoxDecoration(
-                      color: Color.fromRGBO(92, 92, 92, 1),
+                      color: color,
                       borderRadius: BorderRadius.circular(2),
                       boxShadow: [
                         BoxShadow(
