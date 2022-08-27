@@ -80,6 +80,7 @@ flutter:
         - assets/images/photo.png
         - assets/images/folder.png
         - assets/images/headline.png
+        - assets/images/logo.png
 
   uses-material-design: true
   
