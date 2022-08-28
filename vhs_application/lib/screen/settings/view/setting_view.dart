@@ -288,12 +288,18 @@ class SettingsView extends StatelessWidget {
       child: Padding(
         padding:
             const EdgeInsets.only(top: 46) + const EdgeInsets.only(left: 26),
-        child: Text(
-          "BACK",
-          style: TextStyle(
-              fontSize: 28,
-              color: Color.fromRGBO(255, 59, 48, 1),
-              fontWeight: FontWeight.w500),
+        child: Material(
+          color: Colors.transparent,
+          child: InkWell(
+            onTap: () {},
+            child: Text(
+              "BACK",
+              style: TextStyle(
+                  fontSize: 28,
+                  color: Color.fromRGBO(255, 59, 48, 1),
+                  fontWeight: FontWeight.w500),
+            ),
+          ),
         ),
       ),
     );

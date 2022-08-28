@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:vhs_application/core/config/size_config.dart';
+import 'package:vhs_application/screen/tutorial/view/tutorial_view_2.dart';
 
 import '../../../core/constants/app/strings/Strings.dart';
 
@@ -76,7 +77,13 @@ class TutorialView extends StatelessWidget {
                                     fontWeight: FontWeight.w500),
                               ),
                             ),
-                            onTap: () {},
+                            onTap: () {
+                              Navigator.pushReplacement(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          const TutorialView2()));
+                            },
                           ),
                         ))
                   ],

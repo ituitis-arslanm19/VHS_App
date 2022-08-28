@@ -53,36 +53,73 @@ class FolderView extends StatelessWidget {
                 // Callback that sets the selected popup menu item.
                 onSelected: (value) => {},
                 itemBuilder: (BuildContext context) => <PopupMenuEntry>[
-                      const PopupMenuItem(
+                      PopupMenuItem(
                         value: "itemOne",
-                        child: Padding(
-                          padding: EdgeInsets.symmetric(horizontal: 8.0),
-                          child: Text('Open camera'),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text('Open camera'),
+                            Icon(
+                              Icons.videocam,
+                              color: Colors.red,
+                              size: 24.0,
+                            ),
+                          ],
                         ),
                         textStyle: TextStyle(
                             fontSize: 15,
                             color: Color.fromARGB(255, 255, 255, 255),
                             fontWeight: FontWeight.w500),
                       ),
-                      const PopupMenuItem(
+                      PopupMenuItem(
                         value: "itemTwo",
-                        child: Text('Import from Gallery'),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text('Import from Gallery'),
+                            Icon(
+                              Icons.video_file,
+                              color: Colors.red,
+                              size: 24.0,
+                            ),
+                          ],
+                        ),
                         textStyle: TextStyle(
                             fontSize: 15,
                             color: Color.fromARGB(255, 255, 255, 255),
                             fontWeight: FontWeight.w500),
                       ),
-                      const PopupMenuItem(
+                      PopupMenuItem(
                         value: "itemThree",
-                        child: Text('Import from iCloud'),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text('Import from iCloud'),
+                            Icon(
+                              Icons.cloud,
+                              color: Colors.red,
+                              size: 24.0,
+                            ),
+                          ],
+                        ),
                         textStyle: TextStyle(
                             fontSize: 15,
                             color: Color.fromARGB(255, 255, 255, 255),
                             fontWeight: FontWeight.w500),
                       ),
-                      const PopupMenuItem(
+                      PopupMenuItem(
                         value: "itemFour",
-                        child: Text('Add new folder'),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text('Add new folder'),
+                            Icon(
+                              Icons.create_new_folder,
+                              color: Colors.red,
+                              size: 24.0,
+                            ),
+                          ],
+                        ),
                         textStyle: TextStyle(
                             fontSize: 15,
                             color: Color.fromARGB(255, 255, 255, 255),
@@ -125,7 +162,7 @@ class FolderView extends StatelessWidget {
               padding: const EdgeInsets.all(0.0),
               width: 30.0,
               child: PopupMenuButton(
-                  icon: new Image.asset("assets/images/Headline.png"),
+                  icon: new Image.asset("assets/images/headline.png"),
                   iconSize: 20,
                   color: Color.fromRGBO(31, 31, 31, 0.6),
                   // Callback that sets the selected popup menu item.

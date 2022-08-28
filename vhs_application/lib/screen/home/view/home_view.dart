@@ -9,9 +9,6 @@ import 'package:vhs_application/screen/home/view/take_picture_screen.dart';
 import '../../../core/widgets/buttons/camera_button.dart';
 
 class HomeView extends StatelessWidget {
-  final CameraDescription camera;
-  const HomeView({Key? key, required this.camera}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     SizeConfig sizeConfig = SizeConfig();
@@ -133,7 +130,7 @@ class HomeView extends StatelessWidget {
           onPressed: () {},
           text: "GLITCH",
         ),
-        SizedBox(width: screenHeight * 0.5),
+        SizedBox(height: screenHeight * 0.9),
         CameraButton3(
           width: screenWidth * 38,
           height: screenHeight * 5.5,
@@ -141,7 +138,7 @@ class HomeView extends StatelessWidget {
           onPressed: () {},
           text: "RGB",
         ),
-        SizedBox(height: screenHeight * 0.5),
+        SizedBox(height: screenHeight * 0.9),
         CameraButton3(
           width: screenWidth * 38,
           height: screenHeight * 5.5,
@@ -168,7 +165,7 @@ class HomeView extends StatelessWidget {
           onPressed: () {},
           text: "GLITCH",
         ),
-        SizedBox(height: screenHeight * 0.5),
+        SizedBox(height: screenHeight * 0.9),
         CameraButton3(
           width: screenWidth * 38,
           height: screenHeight * 5.5,
@@ -176,7 +173,7 @@ class HomeView extends StatelessWidget {
           onPressed: () {},
           text: "RGB",
         ),
-        SizedBox(height: screenHeight * 0.5),
+        SizedBox(height: screenHeight * 0.9),
         CameraButton3(
           width: screenWidth * 38,
           height: screenHeight * 5.5,
